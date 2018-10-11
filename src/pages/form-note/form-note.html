@@ -1,0 +1,68 @@
+<!--
+  Generated template for the FormNotePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar primary>
+    <ion-title>form-note</ion-title>
+  </ion-navbar>
+<ion-toolbar secondary>
+      Toolbar saya.
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+<div>
+  ini halaman form note
+  <div>
+<form [formGroup]="formRegistrasi" (ngSubmit)="onSubmit(formRegistrasi.value)">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>nama</ion-label>
+      <ion-input type="text" formControlName="nama"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pilih jenis kelamin</ion-label>
+    </ion-item>
+  
+    <ion-list radio-group formControlName="jenis_kelamin">
+      <ion-item>
+        <ion-label>Pria</ion-label>
+        <ion-radio value="pria" checked>pria</ion-radio>
+      </ion-item>
+        <ion-item>
+          <ion-label>Wanita</ion-label>
+          <ion-radio value="false"></ion-radio>
+        </ion-item>
+    </ion-list>
+
+    <ion-item>
+      <ion-label>Pekerjaan</ion-label>
+      <ion-select formControlName="pekerjaan">
+        <ion-option *ngFor="let pekerjaan of pekerjaanArrayObject" [value]="pekerjaan.value">
+          {{pekerjaan.text}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button type="submit" color="primary" [disabled]="!formRegistrasi.valid">submit</button>
+    </ion-item>
+
+  </ion-list>
+</form>
+
+</div>
+<!-- menampilkan nilai dari parameter -->
+  id : {{navParams.data.id_note}} 
+  judul : {{navParams.data.judul_note}}
+  isi : {{navParams.data.isi_note}}
+<!-- end menampilkan nilai dari parameter -->
+
+</div>
+</ion-content>

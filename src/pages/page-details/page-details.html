@@ -1,0 +1,53 @@
+<!--
+  Generated template for the PageDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>page-details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<ion-item-group>
+  <ion-item-divider color="light">
+    Buah
+  </ion-item-divider>
+  <ion-item  *ngFor="let buahItem of buah">
+    {{buahItem}}
+  </ion-item>
+  <ion-item-divider color="light">
+    Sayur
+  </ion-item-divider>
+  <ion-item  *ngFor="let sayurItem of sayur">
+    {{sayurItem}}
+  </ion-item>
+</ion-item-group>
+<ion-card>
+  <ion-card-header>Daftar buah</ion-card-header>
+  <ion-list>
+    <ion-item *ngFor="let buahItem of buah">
+        <ion-icon name="heart"></ion-icon>
+        &nbsp; {{buahItem}}
+    </ion-item>
+  </ion-list>
+</ion-card>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-l6>1</ion-col>
+    <ion-col col-l6>2</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-l6>3</ion-col>
+    <ion-col col-l6>4</ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>

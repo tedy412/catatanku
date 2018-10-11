@@ -1,0 +1,7 @@
+{
+  "name": "catatanku",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
